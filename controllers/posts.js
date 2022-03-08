@@ -3,10 +3,10 @@ import PostTestimonials from "../models/testimonials.js"
 
 export const getPosts = async (req, res) => {
     try {
-        const posttestimonials =  await PostTestimonials.find();
+        const posttestimonial =  await PostTestimonials.find();
 
-        res.status(200).json(posttestimonials);
-        console.log(posttestimonials)
+        res.status(200).json(posttestimonial);
+        console.log(posttestimonial)
         
     } catch (error) {
         res.status(404).json({message: error.message })
